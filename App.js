@@ -13,6 +13,7 @@ import ListingsContainer from './app/components/ListingsContainer';
 import AppTextInput from './app/components/AppTextInput';
 
 import AppPicker from './app/components/AppPicker'
+import LoginScreen from './app/screens/LoginScreen'
 
 
 const categories = [
@@ -23,18 +24,21 @@ const categories = [
 
 export default function App() {
 
-  const [isNew, setIsNew] = useState(false)
+  const [category, setCategory] = useState()
 
   return (
     <SafeAreaView>
-      <AppPicker
+      {/* <AppPicker
+        selectedItem={category}
+        onSelectItem={item => setCategory(item)}
         items={categories}
         icon='apps'
         placeholder='Category'
       />
       <AppTextInput
         icon='email'
-      />
+      /> */}
+      <LoginScreen />
     </SafeAreaView>
   )
 }

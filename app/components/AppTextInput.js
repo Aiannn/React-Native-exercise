@@ -9,9 +9,10 @@ import defaultStyles from '../config/styles'
 function AppTextInput(props) {
     return (
         <View style={styles.container}>
-            <MaterialCommunityIcons name={props.icon} size={20} color='blue' style={styles.icon} />
+            <MaterialCommunityIcons name={props.icon} size={20} color='black' style={styles.icon} />
             <TextInput
-                placeholder='username'
+                onChangeText={props.onChangeText}
+                placeholder={props.placeholder}
                 style={defaultStyles.text}
             />
         </View>
@@ -21,7 +22,7 @@ function AppTextInput(props) {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        backgroundColor: 'grey',
+        backgroundColor: 'beige',
         borderRadius: 25,
         width: '100%',
         padding: 15,

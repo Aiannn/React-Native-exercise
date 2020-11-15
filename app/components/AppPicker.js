@@ -19,7 +19,7 @@ function AppPicker(props) {
                     <MaterialCommunityIcons name={props.icon} size={20} color='blue' style={styles.icon} />
                     <TextInput
                         style={styles.text}
-                        placeholder={props.placeholder}
+                        placeholder={props.selectedItem ? props.selectedItem.label : props.placeholder}
                     />
                     <MaterialCommunityIcons name='chevron-down' size={20} color='blue' />
                 </View>
@@ -33,7 +33,13 @@ function AppPicker(props) {
                         data={props.items}
                         keyExtractor={(item) => item.value.toString()}
                         renderItem={({ item }) =>
-                            <PickerItem label={item.label} />
+                            <PickerItem
+                                label={item.label}
+                                onPress={() => {
+                                    setModalVisible(false);
+                                    props.onSelectItem(item)
+                                }}
+                            />
                         }
                     />
                 </SafeAreaView>

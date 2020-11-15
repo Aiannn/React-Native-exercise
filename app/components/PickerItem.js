@@ -1,17 +1,20 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 function PickerItem(props) {
     return (
-        <TouchableOpacity>
-            <Text>{props.label}</Text>
+        <TouchableOpacity onPress={props.onPress}>
+            <Text style={styles.text}>{props.label}</Text>
         </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {}
+    text: {
+        padding: 20,
+        // backgroundColor: 'red'
+    }
 });
 
 export default PickerItem;
