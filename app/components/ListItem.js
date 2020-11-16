@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity, TouchableHighlight } from 'react-native';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 function ListItem(props) {
@@ -15,6 +17,7 @@ function ListItem(props) {
                         <Text>{props.title}</Text>
                         <Text>{props.subTitle}</Text>
                     </View>
+                    {/* <MaterialCommunityIcons name='trash-can' size={70} /> */}
                 </View>
             </TouchableHighlight>
         </Swipeable>

@@ -14,6 +14,7 @@ import AppTextInput from './app/components/AppTextInput';
 
 import AppPicker from './app/components/AppPicker'
 import LoginScreen from './app/screens/LoginScreen'
+import RegisterScreen from './app/screens/RegisterScreen';
 
 
 const categories = [
@@ -27,19 +28,9 @@ export default function App() {
   const [category, setCategory] = useState()
 
   return (
-    <SafeAreaView>
-      {/* <AppPicker
-        selectedItem={category}
-        onSelectItem={item => setCategory(item)}
-        items={categories}
-        icon='apps'
-        placeholder='Category'
-      />
-      <AppTextInput
-        icon='email'
-      /> */}
-      <LoginScreen />
-    </SafeAreaView>
+    <View>
+      <MessagesScreen />
+    </View>
   )
 }
 
