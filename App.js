@@ -18,6 +18,8 @@ export default function App() {
   // useEffect(() => {
   //   requestPermission()
   // }, [])
+  // ||||||||||| it [] means it gets invoked just one time!
+
 
   const [imageUri, setImageUri] = useState()
 
